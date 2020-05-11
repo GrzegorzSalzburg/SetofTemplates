@@ -10,7 +10,7 @@
  *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
  *  i jakie ma glowne cechy.
  */
- template <typename Typ, int ROZMIAR>
+template <typename Typ, int ROZMIAR>
 class SMacierz{
   SWektor<Typ,ROZMIAR> Mac[ROZMIAR];
   public:
@@ -21,11 +21,13 @@ class SMacierz{
   SWektor<Typ,ROZMIAR> &operator[](int i);  
   SWektor<Typ,ROZMIAR> operator*(const SWektor<Typ,ROZMIAR>  W2);
 };
+
 template <typename Typ, int ROZMIAR>
 SWektor<Typ,ROZMIAR> SMacierz<Typ,ROZMIAR>::get_Mac(int i) const
 {
      return Mac[i];
 }
+
 template <typename Typ, int ROZMIAR>
 SWektor<Typ,ROZMIAR> & SMacierz<Typ,ROZMIAR>::set_Mac(int i) 
 {
@@ -37,12 +39,13 @@ SWektor<Typ,ROZMIAR> SMacierz<Typ,ROZMIAR>::operator[](int i) const
 {
     return Mac[i];
 }
+
 template <typename Typ, int ROZMIAR>
 SWektor<Typ,ROZMIAR> & SMacierz<Typ,ROZMIAR>::operator[](int i) 
 {
     return Mac[i];
-
 }
+
 template <typename Typ, int ROZMIAR>
 SWektor<Typ,ROZMIAR>  SMacierz<Typ,ROZMIAR>::operator*(const SWektor<Typ,ROZMIAR> W2)
 {
@@ -52,8 +55,6 @@ SWektor<Typ,ROZMIAR> wynik;
          wynik[i]=wynik[i]+Mac[j][i]*W2[j];
   return wynik;
  }
-
-
 
 template <typename Typ, int ROZMIAR>
 Typ SMacierz<Typ,ROZMIAR>::wyznacznik()
@@ -79,8 +80,7 @@ Typ SMacierz<Typ,ROZMIAR>::wyznacznik()
 
       }
       wyznacznik=1;
-      cout<<"wyznacznik"<<endl;
-      cout<<wyznacznik<<endl;
+     
 
         for(int j=0; j<ROZMIAR; j++)
         {
@@ -88,6 +88,7 @@ Typ SMacierz<Typ,ROZMIAR>::wyznacznik()
         } 
 return wyznacznik*mn;
 }
+
 template <typename Typ, int ROZMIAR>
 std::istream& operator >> (std::istream &Strm, SMacierz<Typ,ROZMIAR> &Mac)
 {

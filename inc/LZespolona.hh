@@ -14,9 +14,9 @@ class  LZespolona {
   double   re;    /*! Pole repezentuje czesc rzeczywista. */
   double   im;    /*! Pole repezentuje czesc urojona. */
   public:
- explicit LZespolona(double re=0, double im=0):re(re),im(im){
-    
+  LZespolona(double re=0, double im=0):re(re),im(im){
   }
+
 LZespolona Sprzezenie( );
 double get_re()const{return re;}
 double get_im()const{return im;}
@@ -33,9 +33,6 @@ LZespolona  operator * (  LZespolona  Skl2);
 LZespolona  operator / (  LZespolona  Skl2);
 LZespolona  operator / (  double  Skl2);
 };
-
-
-
 
 /*Zapowiedzi definicji przeciazen operatorow*/
 std::ostream & operator <<(std::ostream &wyj, LZespolona Skl1);

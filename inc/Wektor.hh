@@ -52,11 +52,7 @@ SWektor<Typ,ROZMIAR>  & SWektor<Typ,ROZMIAR>::operator -= (const SWektor<Typ,ROZ
       }
       return *this;
 }
- template <typename Typ, int ROZMIAR>
-Typ SWektor<Typ,ROZMIAR>::dlugosc() 
-{
-      //return sqrt(*this * *this);
-}
+
  template <typename Typ, int ROZMIAR>
  SWektor<Typ,ROZMIAR> SWektor<Typ,ROZMIAR>::operator + (const SWektor<Typ,ROZMIAR> Skl)
 {
